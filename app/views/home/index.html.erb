@@ -1,2 +1,13 @@
 <h1>Home</h1>
-<p>Have fun!</p>
+<p>Have fun <%= current_user.name %>!</p>
+
+<%= form_for Tweet.new do |f| %>
+	<%= f.text_area :message, :cols => "50", :rows => "3"%>
+	<%= f.submit "Post" %>
+<%end%>
+
+<ul>
+<% @tweets.each do |tweet| %>	
+	<li><%= h tweet.message %></li>
+<%end%>
+</ul>

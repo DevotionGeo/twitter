@@ -4,6 +4,7 @@ Twitter::Application.routes.draw do
   match 'signout', to: 'sessions#destroy', as: 'signout'
     
   resources :users
+  resources :tweets
   
   root :to => 'welcome#index'
   

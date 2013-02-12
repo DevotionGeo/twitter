@@ -27,4 +27,8 @@ class User < ActiveRecord::Base
           :class_name => 'User',
           :join_table => 'users_followings'
           
+  def all_tweets
+    Tweet.find(:all, :conditions => ["user_id in (?)", followings.map(&:id).push(self.id)], :order => "created_at desc")
+  end
+  
 end
