@@ -5,7 +5,6 @@ def create
   tweet = current_user.tweets.new(params[:tweet])
   tweet.created_at = Time.now
   tweet.save!
-  notice "woohoo"
   redirect_to "/home"
   
 end
