@@ -1,8 +1,29 @@
+<script type="text/javascript">
+$(function(){
+	$('#tweet_message').keyup(function() {
+		var content_length = $('#tweet_message').val().length;
+		var remaining = 140 - content_length;
+		$('#char_count').html(remaining);
+		if (remaining <20 && remaining >9) {
+			$('#char_count').addClass('dark_red');
+			$('#char_count').removeClass('red');
+		} else if (remaining <10) {
+			$('#char_count').addClass('red');
+			$('#char_count').removeClass('dark_red');
+		} else {
+			$('#char_count').removeClass('dark_red').removeClass('red');
+		}
+	})
+})
+</script>
+
 <h1>Home</h1>
 
 <%= form_for Tweet.new do |f| %>
 	<div id="new_tweet">
-		<h3>What are you doing <%= current_user.username %>?</h3>
+		<h3 style="float: left">What are you doing <%= current_user.username %>?</h3>
+		<h3 id="char_count">140</h3>
+		<div class="clear"></div>
 		<%= f.text_area :message %>
 		<div id="latest_message">
 			<strong>Latest: </strong><%= h @last_tweet.message %>

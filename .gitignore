@@ -16,3 +16,4 @@
 
 # Ignore Facebook Credentials
 /config/facebook.yml
+/config/initializers/omniauth.rb

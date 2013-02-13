@@ -30,6 +30,19 @@ input.button:hover {
 	color: #aaa;
 }
 
+h3.dark_red {
+	color: #5C0002 !important;
+}
+h3.red {
+	color: #D40D12 !important;
+}
+
+#char_count {
+	float: right;
+	font-style: bold;
+	color: #9c9c9c;
+}
+
 #new_tweet {
 	width: 520px;
 	margin-bottom: 25px;

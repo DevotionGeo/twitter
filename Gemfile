@@ -12,7 +12,9 @@ end
 
 gem 'jquery-rails'
 
-gem 'omniauth-facebook', '1.4.0'
+gem "omniauth", "~> 1.1.1"
+gem "omniauth-facebook", "1.4.0"
+
 
 group :development do
 	gem 'thin'

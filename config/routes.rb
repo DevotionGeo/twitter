@@ -9,5 +9,6 @@ Twitter::Application.routes.draw do
   root :to => 'welcome#index'
   
   match "/home" => "home#index"
+  
 
 end
