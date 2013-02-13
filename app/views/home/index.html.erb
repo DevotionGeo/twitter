@@ -1,9 +1,18 @@
 <h1>Home</h1>
-<p>Have fun <%= current_user.username %>!</p>
 
 <%= form_for Tweet.new do |f| %>
-	<%= f.text_area :message, :cols => "50", :rows => "3"%>
-	<%= f.submit "Post" %>
+	<div id="new_tweet">
+		<h3>What are you doing <%= current_user.username %>?</h3>
+		<%= f.text_area :message %>
+		<div id="latest_message">
+			<strong>Latest: </strong><%= h @last_tweet.message %>
+			<%= link_to time_ago_in_words(@last_tweet.created_at) %> ago
+		</div>
+		<div id="submit_button">
+			<%= f.submit "Post", :class => "button" %>
+		</div>
+		<div class="clear"></div>
+	</div>
 <%end%>
 
 <ul id="tweets_list">
@@ -11,8 +20,11 @@
 	<li <% if @tweets.first == tweet %> class="first" <%end%> >
 	<%= image_tag tweet.user.image, :size => "50x50" %>
 	<div class="tweet_message">
-	<b><%= h tweet.user.username %></b>
-	<%= h tweet.message %>
+		<%= link_to tweet.user.username %>
+		<%= h tweet.message %>
+		<div class="tweet_info">
+			 <%= link_to time_ago_in_words(tweet.created_at) %> ago
+		</div>
 	</div>
 	<div class="clear"></div>
 	</li>

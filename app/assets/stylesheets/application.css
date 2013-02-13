@@ -17,9 +17,56 @@
 	overflow: hidden;
 }
 
+input.button {
+	width: 115px;
+	height: 32px;
+	border: 0px;
+	font-size: 120%;
+	color: #666;
+	border-radius: 15px;
+}
+
+input.button:hover {
+	color: #aaa;
+}
+
+#new_tweet {
+	width: 520px;
+	margin-bottom: 25px;
+}
+#new_tweet textarea {
+	width: 520px;
+	height: 40px;
+}
+#new_tweet h3 {
+	font-weight: normal;
+	font-size: 130%;
+	margin: 0px;
+	padding: 0px 0px 5px 0px;
+}
+#new_tweet #latest_message {
+	color: #9c9c9c;
+	font-size: 90%;
+	padding-top: 3px;
+	float: left;
+	width: 360px;
+}
+#new_tweet #submit_button {
+	float: right;
+	text-align: right;
+	width: 160px;
+	padding-top: 3px;
+}
+#new_tweet a {
+	color: #9c9c9c;
+	text-decoration: none;
+	font-weight: normal;
+}
+
 #tweets_list {
 	margin: 0px;
 	padding: 0px;
+	width: 520px;
 }
 #tweets_list li {
 	list-style: none;
@@ -42,3 +89,38 @@
 #tweets_list li div.tweet_message {
 	float: left;
 }
+#tweets_list li div.tweet_message a {
+	color: #2276bb;
+	text-decoration: none;
+	font-weight: bold;
+}
+#tweets_list li div.tweet_message div.tweet_info {
+	color: #9c9c9c;
+	font-size: 90%;
+	padding-top: 3px;
+}
+#tweets_list li div.tweet_message div.tweet_info a {
+	color: #9c9c9c;
+	text-decoration: none;
+	font-weight: normal;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
