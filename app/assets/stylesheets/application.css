@@ -11,3 +11,34 @@
  *= require_self
  *= require_tree .
  */
+.clear {
+	clear: both;
+	height: 0;
+	overflow: hidden;
+}
+
+#tweets_list {
+	margin: 0px;
+	padding: 0px;
+}
+#tweets_list li {
+	list-style: none;
+	padding: 10px 0px;
+	margin: 0px;
+	border-bottom: 1px dashed #D2DADA;
+	background-color: #fff;
+}
+#tweets_list li.first {
+	border-top: 1px dashed #D2DADA;
+}
+#tweets_list li:hover {
+	background-color: #f7f7f7;
+}
+#tweets_list li img {
+	float: left;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+#tweets_list li div.tweet_message {
+	float: left;
+}
