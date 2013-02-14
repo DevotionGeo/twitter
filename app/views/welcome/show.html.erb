@@ -1,0 +1,7 @@
+<h1><%= image_tag @user.image, :size => "50x50", :align => "top"  %> <%= @user.username %></h1>
+
+<%= form_for Tweet.new do |f| %>
+	<%= f.submit "Not following", :class => "button2" %>
+<%end%>
+
+<%= render 'tweets_list' %>

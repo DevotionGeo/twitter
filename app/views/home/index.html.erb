@@ -25,10 +25,12 @@ $(function(){
 		<h3 id="char_count">140</h3>
 		<div class="clear"></div>
 		<%= f.text_area :message %>
-		<div id="latest_message">
-			<strong>Latest: </strong><%= h @last_tweet.message %>
-			<%= link_to time_ago_in_words(@last_tweet.created_at) %> ago
-		</div>
+		<% if @last_tweet %>
+			<div id="latest_message">
+				<strong>Latest: </strong><%= h @last_tweet.message %>
+				<%= link_to time_ago_in_words(@last_tweet.created_at) %> ago
+			</div>
+		<% end %>
 		<div id="submit_button">
 			<%= f.submit "Post", :class => "button" %>
 		</div>

@@ -13,7 +13,7 @@ class ApplicationController < ActionController::Base
     
   def login_required
     unless logged_in?
-    redirect_to root_url
+      redirect_to root_url
     end
   end  
     

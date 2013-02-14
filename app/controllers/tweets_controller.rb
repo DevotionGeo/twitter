@@ -7,7 +7,6 @@ def create
   tweet.created_at = Time.now
   tweet.save!
   redirect_to "/home"
-  
 end
 
 def destroy
