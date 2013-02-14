@@ -36,18 +36,4 @@ $(function(){
 	</div>
 <%end%>
 
-<ul id="tweets_list">
-<% @tweets.each do |tweet| %>	
-	<li <% if @tweets.first == tweet %> class="first" <%end%> >
-	<%= image_tag tweet.user.image, :size => "50x50" %>
-	<div class="tweet_message">
-		<%= link_to tweet.user.username %>
-		<%= h tweet.message %>
-		<div class="tweet_info">
-			 <%= link_to time_ago_in_words(tweet.created_at) %> ago
-		</div>
-	</div>
-	<div class="clear"></div>
-	</li>
-<%end%>
-</ul>
+<%= render 'tweets_list' %>

@@ -30,6 +30,19 @@ input.button:hover {
 	color: #aaa;
 }
 
+input.button2 {
+	width: 155px;
+	height: 32px;
+	border: 0px;
+	font-size: 120%;
+	color: #666;
+	border-radius: 15px;
+}
+
+input.button2:hover {
+	color: #aaa;
+}
+
 h3.dark_red {
 	color: #5C0002 !important;
 }
@@ -63,6 +76,7 @@ h3.red {
 	padding-top: 3px;
 	float: left;
 	width: 360px;
+	word-wrap: break-word;
 }
 #new_tweet #submit_button {
 	float: right;
@@ -101,6 +115,8 @@ h3.red {
 }
 #tweets_list li div.tweet_message {
 	float: left;
+	width: 445px;
+	word-wrap: break-word;
 }
 #tweets_list li div.tweet_message a {
 	color: #2276bb;

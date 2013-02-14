@@ -6,4 +6,9 @@ def index
   @last_tweet = current_user.tweets.last
 end
   
+def show
+  @user = User.find_by_username(params[:username])
+  @tweets = @user.tweets.reverse
+end    
+  
 end
