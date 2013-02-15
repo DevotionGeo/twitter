@@ -5,7 +5,8 @@ class WelcomeController < ApplicationController
    # @tweets = current_user.all_tweets#.paginate(:per_page => 5, :page => params[:page],:order      => 'created_at DESC')  
  # end
 #end
-
+   
+   
 def index
   if logged_in?
     @tweets = current_user.all_tweets.paginate(:per_page => 5, :page => params[:page], :order => 'created_at DESC')

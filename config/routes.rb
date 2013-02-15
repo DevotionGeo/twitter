@@ -3,13 +3,11 @@ Twitter::Application.routes.draw do
   match 'auth/failure', to: redirect('/')
   match 'signout', to: 'sessions#destroy', as: 'signout'
     
-  resources :users
   resources :tweets
   
   root :to => 'welcome#index'
+  #match "/home" => "home#index"  
   
-  match "/home" => "home#index"
-  
-  match "/:username" => 'home#show'
+  match "/:username" => 'welcome#show', as: "user"
 
 end

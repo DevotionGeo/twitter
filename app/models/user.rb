@@ -1,6 +1,8 @@
 class User < ActiveRecord::Base  
+  attr_accessible :provider, :uid, :name, :username, :image, :oauth_token, :oauth_expires_at
   
   has_many :tweets, :dependent => :destroy
+  #has_many :users_followings
 
   # Create the following relationship
   has_and_belongs_to_many :followings,
@@ -29,11 +31,14 @@ class User < ActiveRecord::Base
     end
   end
 
+  def to_param
+    username
+  end
           
   def all_tweets
     #Tweet.where(user_id: 2)
     Tweet.where(user_id: self.followings.pluck(:following_id).push(self.id))
     # Tweet.find(:all, :conditions => ["user_id in (?)", followings.map(&:id).push(self.id)], :order => "created_at desc")
   end
-  
+
 end
