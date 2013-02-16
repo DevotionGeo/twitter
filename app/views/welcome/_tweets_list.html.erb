@@ -6,7 +6,7 @@
 		<%= link_to tweet.user.username, user_path(tweet.user) %>
 		<%= h tweet.message %>
 		<div class="tweet_info">
-			 <%= link_to time_ago_in_words(tweet.created_at) %> ago
+			 <%= link_to time_ago_in_words(tweet.created_at), tweet_path(tweet) %> ago
 		</div>
 	</div>
 	<div class="clear"></div>

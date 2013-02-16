@@ -12,4 +12,8 @@ end
 def destroy
 end
 
+def show
+	@tweet = Tweet.find_by_id(params[:id])
+end
+
 end
