@@ -37,20 +37,9 @@ input.button2 {
 	font-size: 120%;
 	color: #666;
 	border-radius: 15px;
+	margin-bottom: 25px;
 }
 input.button2:hover {
-	color: #aaa;
-}
-
-#thats_you {
-	width: 155px;
-	height: 32px;
-	border: 0px;
-	font-size: 120%;
-	color: #666;
-	border-radius: 15px;
-}
-#thats_you:hover {
 	color: #aaa;
 }
 

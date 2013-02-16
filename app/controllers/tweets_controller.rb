@@ -12,6 +12,10 @@ end
 def destroy
 end
 
+def index
+	redirect_to root_path
+end
+
 def show
 	@tweet = Tweet.find_by_id(params[:id])
 end

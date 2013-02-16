@@ -19,7 +19,9 @@ end
 def show
   if logged_in?
     @user = User.find_by_username(params[:username])
-    @tweets = @user.tweets.paginate(:per_page => 5, :page => params[:page], :order => 'created_at DESC')
+    if @user
+      @tweets = @user.tweets.paginate(:per_page => 5, :page => params[:page], :order => 'created_at DESC')
+    end
   end
 end
 

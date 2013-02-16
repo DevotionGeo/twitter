@@ -1,13 +1,21 @@
-<ul id="tweets_list">
-	<li class="first" >
-		<%= image_tag @tweet.user.image, :size => "50x50" %>
-		<div class="tweet_message">
-			<%= link_to @tweet.user.username, user_path(@tweet.user) %>
-			<%= h @tweet.message %>
-			<div class="tweet_info">
-				<%= link_to time_ago_in_words(@tweet.created_at), tweet_path(@tweet) %> ago
+<% if @tweet %>
+   
+	<ul id="tweets_list">
+		<li class="first" >
+			<%= image_tag @tweet.user.image, :size => "50x50" %>
+			<div class="tweet_message">
+				<%= link_to @tweet.user.username, user_path(@tweet.user) %>
+				<%= h @tweet.message %>
+				<div class="tweet_info">
+					<%= link_to time_ago_in_words(@tweet.created_at), tweet_path(@tweet) %> ago
+				</div>
 			</div>
-		</div>
-		<div class="clear"></div>
-	</li>
-</ul>
+			<div class="clear"></div>
+		</li>
+	</ul>
+
+<% else %>
+
+   <h1 style="font-size: 120%; color: #666">This tweet doesn't exist :(</h1>
+
+<% end %>
