@@ -2,9 +2,14 @@
 	   	
 
 	<h1><%= image_tag @user.image, :size => "50x50", :align => "top"  %> <%= @user.username %></h1>
+	<h3 style="font-size: 120%; color: #666">
+		<%= link_to @user.tweets.count.to_s + " tweets", show_tweets_path, {:style => "text-decoration: none; color: #666"} %> | 
+		<%= link_to @user.followings.count.to_s + " followings", show_followings_path, {:style => "text-decoration: none; color: #666"} %> |  
+		<%= link_to @user.followers.count.to_s + " followers", show_followers_path, {:style => "text-decoration: none; color: #666"} %>
+	</h3>
 
 	<% if @user.username == current_user.username %>
-	<h1 style="font-size: 120%; color: #666">That's you!</h1>
+	<h3 style="font-size: 120%; color: #666">That's you!</h3>
 	<% elsif current_user.followings.include?(@user) %>
 		<%= form_tag unfollow_path do %>
 			<%= submit_tag "Unfollow", :class => "button2" %>

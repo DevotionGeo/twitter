@@ -8,7 +8,7 @@
 
 puts "Creating Julien"
 User.create(
-  name: "Julien Capron"
+  name: "Julien Capron",
   username: "elniafron62",
   image: "http://graph.facebook.com/604185764/picture?type=square"
 )

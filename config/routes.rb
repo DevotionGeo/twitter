@@ -12,5 +12,8 @@ Twitter::Application.routes.draw do
 
   match "/:username/follow" => 'users#add_following', as: "follow"
   match "/:username/unfollow" => 'users#remove_following', as: "unfollow"
+  match "/:username/tweets" => 'users#show_tweets', as: "show_tweets"
+  match "/:username/followings" => 'users#show_followings', as: "show_followings"
+  match "/:username/followers" => 'users#show_followers', as: "show_followers"
 
 end
