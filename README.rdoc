@@ -1,1 +1,5 @@
 This is a clone of Twitter with Facebook authentication.
+
+http://f.cl.ly/items/252G0k2V2G3g0r3J2d32/Capture%20d'écran%202013-02-18%20à%2018.55.33.png
+
+http://f.cl.ly/items/0u3S0m293M071x1u3D2d/Capture%20d'écran%202013-02-18%20à%2018.57.00.png
