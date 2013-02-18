@@ -1,1 +1,18 @@
-Followers
+<% if @user.followers.count > 0 %>
+	<h3 style="font-size: 120%; color: #666">List of <%= @user.username %>'s followers:</h3>
+	<ul id="tweets_list">
+	<% @followers.each do |follower| %>	
+		<li <% if @followers.first == follower %> class="first" <%end%> >
+			<%= image_tag follower.image, :size => "50x50" %>
+			<%= link_to follower.username, user_path(follower), {:style => "color: #2276bb; text-decoration: none; font-weight: bold;"} %>
+		<div class="clear"></div>
+		</li>
+	<%end%>
+	</ul>
+
+	<div id="apple_pagination">	
+	  <%= will_paginate @followers %>
+	</div>
+<% else %>
+	<h3 style="font-size: 120%; color: #666"><%= @user.username %> has no followers :(</h3>
+<% end %>  
