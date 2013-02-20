@@ -21,3 +21,9 @@ group :development do
 	gem 'quiet_assets'
 	gem 'will_paginate'
 end
+
+group :development, :test do
+  gem 'rspec-rails'
+  gem 'capybara'
+  gem 'launchy'
+end

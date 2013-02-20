@@ -10,7 +10,7 @@ end
   
 def show
   @user = User.find_by_username(params[:username])
-  @tweets = @user.tweets.paginate(:per_page => 5, :page => params[:page], :order => 'created_at DESC')
+  @tweets = @user.tweets.paginate(:per_page => 20, :page => params[:page], :order => 'created_at DESC')
 end    
   
 end

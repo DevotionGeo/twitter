@@ -22,17 +22,17 @@ end
 
 def show_tweets
 	@user = User.find_by_username(params[:username])
-	@tweets = @user.tweets.paginate(:per_page => 5, :page => params[:page], :order => 'created_at DESC')
+	@tweets = @user.tweets.paginate(:per_page => 20, :page => params[:page], :order => 'created_at DESC')
 end
 
 def show_followings
 	@user = User.find_by_username(params[:username])
-	@followings = @user.followings.paginate(:per_page => 5, :page => params[:page], :order => 'created_at DESC')
+	@followings = @user.followings.paginate(:per_page => 20, :page => params[:page], :order => 'created_at DESC')
 end
 
 def show_followers
 	@user = User.find_by_username(params[:username])
-	@followers = @user.followers.paginate(:per_page => 5, :page => params[:page], :order => 'created_at DESC')
+	@followers = @user.followers.paginate(:per_page => 20, :page => params[:page], :order => 'created_at DESC')
 end
 
 end

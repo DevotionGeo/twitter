@@ -1,5 +1,5 @@
 class TweetsController < ApplicationController
-before_filter :login_required
+#before_filter :login_required
 
 def create
   tweet = current_user.tweets.new(params[:tweet])
