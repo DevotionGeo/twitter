@@ -1,5 +1,12 @@
 This is a clone of Twitter with Facebook authentication.
 
+- No scaffold used
+- Facebook authentication
+- Follow/unfollow users
+- Tests using RSpec/Capybara
+- Javascript to change the number of characters remaining
+- Ready to be deployed on Heroku
+
 http://i.imgur.com/9fLHB1u.png
 
 http://i.imgur.com/7FEIF6A.png
