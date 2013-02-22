@@ -1,3 +1,5 @@
+== My Twitter
+
 This is a clone of Twitter with Facebook authentication.
 
 - No scaffold used
