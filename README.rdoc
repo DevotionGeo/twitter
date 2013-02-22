@@ -1,6 +1,6 @@
 == My Twitter
 
-This is a clone of Twitter with Facebook authentication.
+This is a clone of Twitter in Rails with Facebook authentication.
 
 - No scaffold used
 - Facebook authentication
